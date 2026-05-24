@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>대학 강의 정리 포트폴리오</title>
+    <style>
+        /* 기본 스타일 리셋 및 폰트 설정 */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            color: #333;
+            background-color: #f4f6f9;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* 상단 내비게이션 바 (고정형) */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #ffffff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+            z-index: 1000;
+        }
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+        .logo {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #007bff;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        nav ul li {
+            margin-left: 20px;
+        }
+        nav ul li a {
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: #555;
+            transition: color 0.2s;
+        }
+        nav ul li a:hover {
+            color: #007bff;
+        }
+
+        /* 히어로(메인 대문) 섹션 */
+        .hero {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 160px 20px 100px 20px;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            letter-spacing: -1px;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.85;
+        }
+
+        /* 메인 콘텐츠 영역 */
+        .container {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        /* 강의 소개 카드 스타일 */
+        .course-section {
+            background-color: white;
+            border-radius: 16px;
+            padding: 40px;
+            margin-bottom: 45px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.03);
+            scroll-margin-top: 100px; /* 링크 이동 시 상단 바에 가려짐 방지 */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .course-section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+        }
+        .course-tag {
+            display: inline-block;
+            background-color: #e3f2fd;
+            color: #0d47a1;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        .course-title {
+            font-size: 2rem;
+            color: #111;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #f1f3f5;
+            padding-bottom: 12px;
+        }
+        .course-desc {
+            font-size: 1.05rem;
+            color: #444;
+            text-align: justify;
+            word-break: keep-all;
+            white-space: pre-line; /* 줄바꿈 자연스럽게 유지 */
+        }
+
+        /* 푸터 영역 */
+        footer {
+            background-color: #212529;
+            color: #ced4da;
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 100px;
+            font-size: 0.9rem;
+            border-top: 1px solid #343a40;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <div class="logo"><a href="#">Lecture Archive</a></div>
+            <nav>
+                <ul>
+                    <li><a href="#ai-prog">AI프로그래밍</a></li>
+                    <li><a href="#micro-proc">마이크로프로세서</a></li>
+                    <li><a href="#net">컴퓨터네트워크</a></li>
+                    <li><a href="#comm-theory">통신이론</a></li>
+                    <li><a href="#vision">머신비전</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>전공 과목 학습 정리 포트폴리오</h1>
+        <p>전기·전자·컴퓨터 공학 분야에서 이수한 주요 강좌의 목표와 핵심 실무 능력을 기록합니다.</p>
+    </section>
+
+    <main class="container">
+
+        <section id="ai-prog" class="course-section">
+            <span class="course-tag">전공 과목</span>
+            <h2 class="course-title">🤖 AI프로그래밍</h2>
+            <p class="course-desc">
+                본 강좌의 수업 목표는 인공지능 연구/개발을 위해 기초 프로그래밍 능력과 응용하는 실무능력을 배양하는 것이다. 
+                본 강좌에서는 전처리, 인공지능 모델 개발을 위한 API 활용, 관련 소프트웨어 개발 방법등을 배우며, 인공지능 오픈소스 프로젝트를 활용하여 인공지능 연구 개발 동향 등을 파악하는 과정을 배운다. 
+                마지막으로, 간단한 캐글 실습을 통해 어떻게 인공지능 알고리즘이 발전하는 과정 실습을 동시에 병행한다.
+            </p>
+        </section>
+
+        <section id="micro-proc" class="course-section">
+            <span class="course-tag">전공 과목</span>
+            <h2 class="course-title">🎛️ 마이크로프로세서</h2>
+            <p class="course-desc">
+                본 강좌의 수업 목표는 마이크로프로세서의 기본 원리와 동작을 이해하고 응용하는 실무능력을 배양하는 것이다. 
+                본 강좌에서는 마이크로프로세서의 구조와 명령셋을 이해하고 각종 응용을 위한 기계어 혹은 어셈블리어 수준의 프로그래밍 능력을 학습하며, 구체적으로 프로세서 아키텍쳐, 명령셋, 메모리 인터페이스, 입출력 외부장치 인터페이스 및 응용, 각종 센서 인터페이스, 인터럽트 및 DMA 제어 기능 등의 내용을 포함한다. 
+                강좌에서는 대표적인 마이크로프로세서인 8051을 중심으로 이론교육과 실험실습을 동시에 병행한다.
+            </p>
+        </section>
+
+        <section id="net" class="course-section">
+            <span class="course-tag">전공 과목</span>
+            <h2 class="course-title">🌐 컴퓨터네트워크</h2>
+            <p class="course-desc">
+                수업목표는 TCP/IP 프로토콜들의 동작과 기본적인 라우터 동작을 이해하고, 체험적으로 분석해 보는 것을 목표로한다. 
+                윈도우 서버 프로그램 설치과정 뿐만아니라 서버와 클라이언트 간의 실제적인 TCP/IP 관련 프로토콜에 의해 송수신되는 패킷들에 대한 수집및 분석을 통해, 프로토콜 헤더의 각 영역 및 타이머에 의한 재전송 과정 등을 이해하는 것으로 한다.
+            </p>
+        </section>
+
+        <section id="comm-theory" class="course-section">
+            <span class="course-tag">전공 과목</span>
+            <h2 class="course-title">📡 통신이론</h2>
+            <p class="course-desc">
+                본 강좌에서는 신호의 에너지와 전력, 신호의 상관, 신호와 시스템, 시간상에서의 신호의 표현, 주파수 영역상에서의 신호의 표현, 통신시스템의 주파수특성, 디지털신호의 대역폭, 필터, 잡음의 표현, AM변조, 동기검파, 수퍼헤테로다인수신기, DSB, SSB, VSB, TV신호, 각변조, FM변조, FM수신기, 펄스변조와 기저대역전송, 양자화, 부호화, 심볼간의 간섭, 무선통신시스템에서의 신호와 잡음과의 관계등에 대해서 학습한다.
+            </p>
+        </section>
+
+        <section id="vision" class="course-section">
+            <span class="course-tag">전공 과목</span>
+            <h2 class="course-title">👁️ 머신비전</h2>
+            <p class="course-desc">
+                본 강좌의 수업 목표는 컴퓨터 비전의 기본 원리와 동작을 이해하고 이를 머신러닝에 응용하는 실무능력을 배양하는 것이다. 
+                본 강좌에서는 카메라 센서의 동작 원리와 여러 이미지 포맷을 이해하고, 물체 인식 및 분류 등 머신 비전 프로그래밍 능력을 학습하며, 구체적으로 OpenCV를 활용하여 외곽선 추출, 영상 특징 변경 등 고전적인 컴퓨터 비전 내용 및 인공지능 프레임워크를 활용한 컨볼루션 신경망(CNN), 비전 트랜스포머(ViT)를 이용한 인식, 생성형 AI등의 이론교육과 실험실습을 동시에 병행한다.
+            </p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 강의 정리 포트폴리오. All rights reserved.</p>
+        <p style="font-size: 0.8rem; margin-top: 5px; color: #6c757d;">Designed for Academic Performance Display</p>
+    </footer>
+
+</body>
+</html>
